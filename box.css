@@ -1,0 +1,18 @@
+/* box.css */
+.copyright-box {
+    background-color: pink; /* Cor de fundo da caixa */
+    border: 1px solid #000000; /* Borda da caixa */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    max-width: 600px; /* Largura máxima da caixa */
+    margin: 0 auto; /* Centralizar horizontalmente */
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+    color: #000000; /* Cor do texto */
+    position: fixed; /* Posição fixa */
+    bottom: 0; /* Alinhar ao rodapé */
+    left: 50%; /* Centralizar horizontalmente */
+    transform: translateX(-50%); /* Centralizar horizontalmente */
+  }
+  
