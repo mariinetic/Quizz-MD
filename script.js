@@ -1,13 +1,13 @@
-// Variáveis globais
+// Variáveis que vão ser usadas
 let correctAnswersCount = 0;
 let questionIndex = 0;
 
-// Função para iniciar o quiz
+// Função para começar o meu quiz
 function startQuiz() {
   document.getElementById('generateBtn').addEventListener('click', showQuestion);
 }
 
-// Função para exibir a próxima pergunta
+// Aqui passa as perguntas
 function showQuestion() {
   if (questionIndex >= questions.length) {
     displayFinalMessage();
@@ -42,7 +42,7 @@ function showQuestion() {
   document.getElementById('answerContainer').appendChild(submitButton);
 }
 
-// Função para verificar a resposta
+// Aqui conta as respostas certas
 function checkAnswer() {
   const selectedOption = document.querySelector('input[name="answerOption"]:checked');
   if (!selectedOption) {
@@ -59,24 +59,24 @@ function checkAnswer() {
   showQuestion();
 }
 
-// Função para exibir a mensagem final
+// Aqui eu agradeço
 function displayFinalMessage() {
   const resultMessage = document.getElementById('resultMessage');
-  resultMessage.innerText = "Obrigado por participar! Você acertou " + correctAnswersCount + " de " + questions.length + " perguntas.";
+  resultMessage.innerText = "Meu querido(o)! Você acertou " + correctAnswersCount + " de " + questions.length + " perguntas.";
   document.getElementById('questionContainer').innerText = '';
   document.getElementById('answerContainer').innerHTML = '';
 
   const backButton = document.createElement('button');
   backButton.innerText = 'Voltar para o Menu';
   backButton.addEventListener('click', function() {
-    // Redireciona de volta para o menu
+    // Voltando pro menu principal
     window.location.href = "index.html";
   });
 
   document.getElementById('answerContainer').appendChild(backButton);
 }
 
-// Inicializa o quiz quando o DOM estiver completamente carregado
+// Reinicia o quizz
 document.addEventListener('DOMContentLoaded', startQuiz);
 document.getElementById('backToMenuBtn').addEventListener('click', function() {
   // Redireciona de volta para o menu
