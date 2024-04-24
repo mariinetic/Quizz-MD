@@ -1,42 +1,42 @@
-const questions = [
+const perguntas = [
     {
-      question: "Oque significa ¬p ou ∼p?",
-      options: ["A) Tabela verdade", "B) Negação de p"],
-      answer: "B) Negação de p"
+      perguntinha: "Oque significa ¬p ou ∼p?",
+      opções: ["A) Tabela verdade", "B) Negação de p"],
+      respostas: "B) Negação de p"
     },
     {
-      question: "Oque significa esse símbolo p ∧ q?",
-      options: ["A) Conjunção", "B) Disjunção"],
-      answer: "A) Conjunção"
+      perguntinha: "Oque significa esse símbolo p ∧ q?",
+      opções: ["A) Conjunção", "B) Disjunção"],
+      respostas: "A) Conjunção"
     },
     {
-      question: "p ∨ q também pode ser lido como:",
-      options: ["A) p e q", "B) p ou q"], 
-      answer: "B) p ou q"
+      perguntinha: "p ∨ q também pode ser lido como:",
+      opções: ["A) p e q", "B) p ou q"], 
+      respostas: "B) p ou q"
     },
     {
-      question: "p → q significa:?",
-      options: ["A) se p então q", "B) p se e somente se q"],
-      answer: "A) se p então q"
+      perguntinha: "p → q significa:?",
+      opções: ["A) se p então q", "B) p se e somente se q"],
+      respostas: "A) se p então q"
     },
     {
-      question: "Em uma tabela verdade p tem valores:",
-      options: ["A) V,V,F,F", "B) V,F,V,F" ],
-      answer: "A) V,V,F,F"
+      perguntinha: "Em uma tabela verdade p tem valores:",
+      opções: ["A) V,V,F,F", "B) V,F,V,F" ],
+      respostas: "A) V,V,F,F"
     },
     {
-      question: "Em uma tabela verdade q tem valores:",
-      options: ["A) V,V,F,F", "B) V,F,V,F"],
-      answer: "B) V,F,V,F"
+      perguntinha: "Em uma tabela verdade q tem valores:",
+      opções: ["A) V,V,F,F", "B) V,F,V,F"],
+      respostas: "B) V,F,V,F"
     },
     {
-      question: "Oque é tautologia?",
-      options: ["A) Uma proposição composta que sempre tem valor lógico falso", "B) Uma proposição composta que sempre tem valor lógico verdadeiro"],
-      answer: "B) Uma proposição composta que sempre tem valor lógico verdadeiro"
+      perguntinha: "Oque é tautologia?",
+      opções: ["A) Uma proposição composta que sempre tem valor lógico falso", "B) Uma proposição composta que sempre tem valor lógico verdadeiro"],
+      respostas: "B) Uma proposição composta que sempre tem valor lógico verdadeiro"
     },
     {
-      question: "Verdadeira: se Windows é um sistema operacional, então Pascal é uma linguagem de programação:",
-      options: ["A) p → q", "B) p ↔ q"],
-      answer: "A) p → q"
+      perguntinha: "Verdadeira: se Windows é um sistema operacional, então Pascal é uma linguagem de programação:",
+      opções: ["A) p → q", "B) p ↔ q"],
+      respostas: "A) p → q"
     }
 ]
