@@ -1,6 +1,6 @@
 // Variáveis que vão ser usadas
-let correctAnswersCount = 0;
-let questionIndex = 0;
+let contador_acertos = 0;
+let questoess = 0;
 
 // Função para começar o meu quiz
 function startQuiz() {
@@ -9,71 +9,71 @@ function startQuiz() {
 
 // Aqui passa as perguntas
 function showQuestion() {
-  if (questionIndex >= questions.length) {
+  if (questoess >= perguntas.length) {
     displayFinalMessage();
     return;
   }
 
-  const { question, options, answer } = questions[questionIndex];
+  const { perguntinha, opções, respostas } = perguntas[questoess];
 
-  document.getElementById('questionContainer').innerText = question;
+  document.getElementById('contquest').innerText = perguntinha;
 
-  const optionsContainer = document.createElement('div');
-  options.forEach(option => {
-    const optionLabel = document.createElement('label');
-    optionLabel.innerText = option;
+  const conteudo = document.createElement('div');
+  opções.forEach(option => {
+    const topçoes = document.createElement('label');
+    topçoes.innerText = option;
 
     const optionRadio = document.createElement('input');
     optionRadio.type = 'radio';
-    optionRadio.name = 'answerOption';
+    optionRadio.name = 'respostacerta';
     optionRadio.value = option;
 
-    optionsContainer.appendChild(optionRadio);
-    optionsContainer.appendChild(optionLabel);
-    optionsContainer.appendChild(document.createElement('br'));
+    conteudo.appendChild(optionRadio);
+    conteudo.appendChild(topçoes);
+    conteudo.appendChild(document.createElement('br'));
   });
 
-  const submitButton = document.createElement('button');
-  submitButton.innerText = 'Verificar Resposta';
-  submitButton.addEventListener('click', checkAnswer);
+  const verificador = document.createElement('button');
+  verificador.innerText = 'Verificar Resposta';
+  verificador.addEventListener('click', checkAnswer);
 
-  document.getElementById('answerContainer').innerHTML = '';
-  document.getElementById('answerContainer').appendChild(optionsContainer);
-  document.getElementById('answerContainer').appendChild(submitButton);
+  document.getElementById('contresp').innerHTML = '';
+  document.getElementById('contresp').appendChild(conteudo);
+  document.getElementById('contresp').appendChild(verificador);
 }
 
 // Aqui conta as respostas certas
 function checkAnswer() {
-  const selectedOption = document.querySelector('input[name="answerOption"]:checked');
-  if (!selectedOption) {
-    alert('Por favor, selecione uma opção.');
+  const seleção = document.querySelector('input[name="respostacerta"]:checked');
+  if (!seleção) {
+    alert('oops você não selecionou nada !');
     return;
   }
-  const userAnswer = selectedOption.value;
-  const correctAnswer = questions[questionIndex].answer;
-  if (userAnswer === correctAnswer) {
-    correctAnswersCount++;
+  const usuarios = seleção.value;
+  const acertinhos = perguntas[questoess].respostas;
+  if (usuarios === acertinhos) {
+    contador_acertos++;
   }
 
-  questionIndex++;
+  questoess++;
   showQuestion();
 }
 
 // Aqui eu agradeço
 function displayFinalMessage() {
-  const resultMessage = document.getElementById('resultMessage');
-  resultMessage.innerText = "Meu querido(o)! Você acertou " + correctAnswersCount + " de " + questions.length + " perguntas.";
-  document.getElementById('questionContainer').innerText = '';
-  document.getElementById('answerContainer').innerHTML = '';
+  const resultadinhos = document.getElementById('resultadinhos');
+  resultadinhos.innerText = "Querido(a)! Você acertou " + contador_acertos + " de " + perguntas.length + " perguntas.";
+  document.getElementById('contquest').innerText = '';
+  document.getElementById('contresp').innerHTML = '';
 
-  const backButton = document.createElement('button');
-  backButton.innerText = 'Voltar para o Menu';
-  backButton.addEventListener('click', function() {
+  const voltando = document.createElement('button');
+  voltando.innerText = 'Voltar para o Menu';
+  voltando.addEventListener('click', function() {
     // Voltando pro menu principal
     window.location.href = "index.html";
   });
 
-  document.getElementById('answerContainer').appendChild(backButton);
+  document.getElementById('contresp').appendChild(voltando);
 }
 
 // Reinicia o quizz
